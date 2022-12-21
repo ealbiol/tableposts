@@ -1,0 +1,27 @@
+$bg-dark-blue: #000032;
+$bg-grey:#303030;
+
+
+@mixin post-animation(){
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(255, 255, 255, 0.25), 
+      -5px -5px 30px 15px rgba(255, 255, 255, 0.22);
+}
+
+@mixin post-style(){
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    border: 2px black solid;
+    border-radius: 5px;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    box-shadow: 5px 5px 30px 7px rgba(255, 255, 255, 0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+    transition: 0.4s;
+}
+
+@mixin font-site(){
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

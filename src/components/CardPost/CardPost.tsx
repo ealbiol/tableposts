@@ -3,29 +3,43 @@ import { Post } from '../../interfaces/Post'
 import "./CardPost.scss";
 import IconButton from '@mui/material/IconButton';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
-interface Props {
-    post : Post;
-    handleDeletePost: (id_post: number)=>void;
+import EditIcon from '@mui/icons-material/Edit';
+
+
+interface Props {
+  post: Post;
+  handleDeletePost: (id_post: number) => void;
+  setPostSelected: (postSelected: Post) => void;
+  setModal: (modal_mode: boolean) => void;
 }
-const CardPost = ({post, handleDeletePost}: Props) => {
+
+const CardPost = ({ post, handleDeletePost, setPostSelected, setModal }: Props) => {
+
+  const handleSelected = () => {
+    setPostSelected(post);
+    setModal(true);
+  }
 
   return (
     <div className='card-post'>
-        <IconButton size="large" style={{ position:"absolute",top:0, right:0}} className='card-post__icon-button' onClick={()=>handleDeletePost(post.id)}>
-          <HighlightOffIcon/>
-        </IconButton>
-        <h1 className='card-post__header'>
-        El titulo: {post.title} 
-       
-        </h1>
-      
-        <p className='card-post__body'>
-        El Body: {post.body}
-        </p>
-      <p className='card-post__userid'>
-        El usuario: {post.userId}
+      <IconButton size="large" style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }} className='card-post__icon-button' onClick={() => handleDeletePost(post.id)}>
+        <HighlightOffIcon />
+      </IconButton>
+      <IconButton onClick={() => handleSelected()} style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
+        <EditIcon />
+      </IconButton>
+
+      <h1 className='card-post__header'>
+        {post.title}
+      </h1>
+
+      <p className='card-post__body'>
+        {post.body}
       </p>
-      
+      <p className='card-post__userid'>
+        User {post.userId}
+      </p>
+
     </div>
   )
 }

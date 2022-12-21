@@ -1,0 +1,10 @@
+@import "../../../scss/variables.scss";
+
+.modal{
+@include font-site();
+position: fixed;
+z-index: 1;
+background-color: $bg-grey;
+top: 50%;
+left: 40%;
+}

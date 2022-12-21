@@ -1,21 +1,17 @@
-.card-post{
+@import "../../scss/variables.scss";
 
-    display: flex;
-    flex-direction: column;
-    background-color: antiquewhite;
-    border: 2px black solid;
-    border-radius: 5px;
-    align-items: center;
-    padding: 25px;
-    position: relative;
+.card-post{
+    @include font-site();
+    @include post-style();
     
     &__header{
-        font-size: 22px;
+        font-size: 24px;
         text-align: center;
         border-bottom: 2px black ;
-        border-style: outset;
+        // border-style: outset;
         padding: 10px;
-        background-color: burlywood;
+        // background-color: burlywood;
+        text-transform: capitalize;
     }
     &__body{
         font-size: 16px;
@@ -28,3 +24,7 @@
        
     }
 }
+
+.card-post:hover {
+    @include post-animation()
+  }
