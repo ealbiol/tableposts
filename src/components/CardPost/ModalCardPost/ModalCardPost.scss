@@ -2,9 +2,14 @@
 
 .modal{
 @include font-site();
+@include post-style();
 position: fixed;
 z-index: 1;
 background-color: $bg-grey;
 top: 50%;
-left: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+&__submit{
+    margin-top: 20px;
+}
 }

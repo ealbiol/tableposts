@@ -23,7 +23,6 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
 
     const handleEditPost = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("TENEMOS EL ESTADO TITULO", title, "VALUE:", body);
         const postToUpdate = {
             title: title,
             body: body,
@@ -51,8 +50,8 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
                     <p>Edit Title</p>
                     <input onChange={e => setTitle(e.target.value)} value={title} />
                     <p>Edit Content</p>
-                    <textarea onChange={e => setBody(e.target.value)} value={body} />
-                    <input type="submit" value="Submit" />
+                    <textarea rows={10} cols={30} onChange={e => setBody(e.target.value)} value={body} />
+                    <input type="submit" value="Submit" className="modal__submit"/>
                 </form>
 
 
