@@ -1,0 +1,18 @@
+@import "../../scss/variables.scss";
+
+.sidebar-container{
+    @include font-site();
+    background: #564d4d;
+    border-radius: 0px 5px 5px 0px;
+    width: 250px;
+    height: 100%;
+    padding-top: 20px;
+    &__element{
+        padding: 10px 20px;
+        transition: all 0.25s ease-in-out;
+        margin: 4px 12px;
+        background-color: #E50914;
+        color: white;
+        border-radius: 4px;
+    }
+};

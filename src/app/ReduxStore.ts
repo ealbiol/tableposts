@@ -1,4 +1,4 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit'
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { Post } from "../interfaces/Post";
 
@@ -18,19 +18,19 @@ const postSlice = createSlice({
       state.listPosts = action.payload
     },
     deletePost: (state, action: PayloadAction<number>) => {
-      state.listPosts.splice(action.payload, 1) // Aquí se recibe la acción de store.dispatch. action.payload es el argumento que se recibe. En este caso 'index'.
+      state.listPosts.splice(action.payload, 1)
     },
-    updatePost: (state, action: PayloadAction <Post>)=>{
-        const indexPost = state.listPosts.findIndex((post:Post)=> post.id === action.payload.id);
+    updatePost: (state, action: PayloadAction <Post>) => {
+        const indexPost = state.listPosts.findIndex((post:Post) => post.id === action.payload.id);
         state.listPosts.splice(indexPost, 1, action.payload)
-    }
+    },
 
-  }
-})
+  },
+});
 
 
-export const { setPost, deletePost, updatePost } = postSlice.actions
+export const { setPost, deletePost, updatePost } = postSlice.actions;
 
 export const store = configureStore({
-  reducer: postSlice.reducer
-})
+  reducer: postSlice.reducer,
+});

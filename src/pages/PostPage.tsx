@@ -10,16 +10,15 @@ function PostPage() {
   store.subscribe(() => setListPost(store.getState().listPosts))
   const getPostsF = async () => {
     const res = await getPosts();
-    store.dispatch(setPost(res))
+    const resFormatted = res.map((post:Post, key:number)=>{
+        return {...post, url: "https://picsum.photos/200/300/?random&rnd"+new Date().getTime() + key}
+    })
+    store.dispatch(setPost(resFormatted))
   }
 
   useEffect(() => {
     getPostsF();
   }, [])
-
-
-
-
   return (
     <>
      <GridCardPosts listPosts={listPost} />

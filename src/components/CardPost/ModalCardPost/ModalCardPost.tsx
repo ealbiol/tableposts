@@ -28,7 +28,8 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
             title: title,
             body: body,
             id: singlePost.id,
-            userId: singlePost.userId
+            userId: singlePost.userId,
+            url: singlePost.url
         }
         store.dispatch(updatePost(postToUpdate));
         handleCloseModal();

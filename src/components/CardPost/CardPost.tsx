@@ -1,5 +1,5 @@
 
-import { Post } from '../../interfaces/Post'
+import { Post } from '../../interfaces/Post';
 import "./CardPost.scss";
 import IconButton from '@mui/material/IconButton';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
@@ -13,16 +13,25 @@ interface Props {
   setModal: (modal_mode: boolean) => void;
 }
 
+/**
+ * 
+ * @param param0 {Post} post
+ * @param param1 {Function} handleDeletePost
+ * @returns 
+ */
 const CardPost = ({ post, handleDeletePost, setPostSelected, setModal }: Props) => {
 
   const handleSelected = () => {
     setPostSelected(post);
     setModal(true);
-  }
+  };
 
   return (
     <div className='card-post'>
-      <IconButton size="large" style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }} className='card-post__icon-button' onClick={() => handleDeletePost(post.id)}>
+      <IconButton
+        size="large"
+        style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }}
+        onClick={() => handleDeletePost(post.id)}>
         <HighlightOffIcon />
       </IconButton>
       <IconButton onClick={() => handleSelected()} style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
@@ -32,6 +41,7 @@ const CardPost = ({ post, handleDeletePost, setPostSelected, setModal }: Props) 
       <h1 className='card-post__header'>
         {post.title}
       </h1>
+      <img src={post.url} />
 
       <p className='card-post__body'>
         {post.body}
