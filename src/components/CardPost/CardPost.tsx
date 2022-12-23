@@ -31,10 +31,12 @@ const CardPost = ({ post, handleDeletePost, setPostSelected, setModal }: Props) 
       <IconButton
         size="large"
         style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }}
-        onClick={() => handleDeletePost(post.id)}>
+        onClick={() => handleDeletePost(post.id)}
+        id="button-delete"
+        >
         <HighlightOffIcon />
       </IconButton>
-      <IconButton onClick={() => handleSelected()} style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
+      <IconButton onClick={() => handleSelected()} id="button-selected" style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
         <EditIcon />
       </IconButton>
 

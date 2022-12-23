@@ -36,7 +36,7 @@ const NavBar = () => {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             More
                         </Typography>
-                        <Button onClick={() => navigate("/login")} color="inherit">Login</Button>
+                        {/*<Button onClick={() => navigate("/")} color="inherit">Login</Button>*/}
                     </Toolbar>
                 </AppBar>
             </ThemeProvider>

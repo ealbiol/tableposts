@@ -4,8 +4,11 @@ import { store, setPost } from "../app/ReduxStore";
 import { useEffect, useState } from "react";
 import { Post } from "../interfaces/Post";
 import { GridCardPosts } from '../components/CardPost';
+import { useNavigate , Navigate} from "react-router-dom";
+
 
 function PostPage() {
+    const navigate = useNavigate();
     const [listPost, setListPost] = useState<Array<Post>>([])
     store.subscribe(() => setListPost(store.getState().listPosts))
     const getPostsF = async () => {
@@ -18,12 +21,17 @@ function PostPage() {
 
     useEffect(() => {
         getPostsF();
-    }, [])
-    return (
-        <>
+    }, []);
+    
+    const user = localStorage.getItem("user")
+    if (user){
+        return (
             <GridCardPosts listPosts={listPost} />
-        </>
-    );
+        );
+    } else {
+         
+        return (<Navigate to="/"/>)
+    }
 }
 
 export default PostPage;
