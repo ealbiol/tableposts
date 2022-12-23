@@ -34,28 +34,31 @@ const Login = () => {
 
     return (
         <div className="login">
-            User name
-            <TextField
-                helperText="Please enter your email"
-                id="demo-helper-text-misaligned"
-                type="email"
-                value={user}
-                onChange={e => setUser(e.target.value)}
-
-            />
-            Password:
-            <TextField id="demo-helper-text-misaligned-no-helper"
-                value={password}
-                type={"password"}
-                onChange={e => setPassword(e.target.value)}
-            />
             <ThemeProvider theme={theme}>
+                <span style={{ color: "white", marginBottom: "5%" }}>User Name</span>
+                <TextField
+                    //helperText="Please enter your email"
+                    id="demo-helper-text-misaligned"
+                    type="email"
+                    value={user}
+                    onChange={e => setUser(e.target.value)}
+                    sx={{ input: { color: 'white' }, border: '2px solid white', borderRadius: 0.5 }}
+                />
+                <span style={{ color: "white", marginBottom: "5%", marginTop: "5%" }}>Password</span>
+                <TextField id="demo-helper-text-misaligned-no-helper"
+                    value={password}
+                    type={"password"}
+                    onChange={e => setPassword(e.target.value)}
+                    sx={{ input: { color: 'white' }, border: '2px solid white', borderRadius: 0.5 }}
+
+                />
+
                 <Button
                     variant="contained"
                     sx={{ width: 200, padding: 1, margin: 2 }}
                     onClick={() => handleLogin()}
                     color="primary"
-                    >
+                >
                     Login
                 </Button>
             </ThemeProvider>

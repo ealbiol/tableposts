@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <div className='sideBar-and-grid-posts'>
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'none', lg:'block' } }}>
             <SideBar />
           </Box>
         <div>
