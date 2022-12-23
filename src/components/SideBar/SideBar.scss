@@ -7,6 +7,11 @@
     width: 250px;
     height: 100%;
     padding-top: 20px;
+    padding-bottom:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &__element{
         @include red-button();
     }

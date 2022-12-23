@@ -5,14 +5,12 @@ import { Box } from '@mui/system';
 
 function SidebarLayout() {
     return (
-        <div>
-            <div className='sideBar-and-grid-posts'>
+        <div style={{display:"flex", alignItems:"flex-start", marginTop:"1%"}}>
+            <div>
                 <Box sx={{ display: { xs: 'none', md: 'none', lg:'block' } }}>
                     <SideBar />
                 </Box>
-            </div>
-
-        
+            </div>  
             <div>
                 <Outlet />
             </div>
