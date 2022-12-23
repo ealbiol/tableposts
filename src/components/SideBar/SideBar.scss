@@ -8,11 +8,6 @@
     height: 100%;
     padding-top: 20px;
     &__element{
-        padding: 10px 20px;
-        transition: all 0.25s ease-in-out;
-        margin: 4px 12px;
-        background-color: #E50914;
-        color: white;
-        border-radius: 4px;
+        @include red-button();
     }
 };

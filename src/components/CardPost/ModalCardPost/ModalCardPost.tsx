@@ -48,7 +48,7 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
                         <HighlightOffIcon style={{ color: "white" }} />
                     </IconButton>
                     <p>Edit Title</p>
-                    <input onChange={e => setTitle(e.target.value)} value={title} />
+                    <textarea rows={2} cols={30} onChange={e => setTitle(e.target.value)} value={title} />
                     <p>Edit Content</p>
                     <textarea rows={10} cols={30} onChange={e => setBody(e.target.value)} value={body} />
                     <input type="submit" value="Submit" className="modal__submit"/>
