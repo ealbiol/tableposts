@@ -1,18 +1,24 @@
 @import "../../scss/variables.scss";
 
 .sidebar-container{
-    @include font-site();
-    background: #564d4d;
-    border-radius: 0px 5px 5px 0px;
-    width: 250px;
-    height: 100%;
-    padding-top: 20px;
-    padding-bottom:10%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &__element{
-        @include red-button();
-    }
+        &__sidebar-buttons{
+            @include font-site();
+            background: #564d4d;
+            border-radius: 0px 5px 5px 0px;
+            width: 250px;
+            height: 100%;
+            padding-top: 20px;
+            padding-bottom:10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &__element{
+            @include red-button();
+        };
+        &__sidebar-arrow{
+            margin-top: 4%
+        };   
+    };
 };

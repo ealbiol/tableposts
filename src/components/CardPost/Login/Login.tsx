@@ -21,10 +21,7 @@ const Login = () => {
     });
 
     const handleLogin = () => {
-        console.log("UserName", user);
-        console.log("Password", password);
         localStorage.setItem("user", JSON.stringify({ user: user, password: password }))
-        console.log(localStorage);
         if (user && password) {
             navigate("/home");
         } else {
@@ -35,8 +32,8 @@ const Login = () => {
     return (
         <div className="login">
             <ThemeProvider theme={theme}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <span style={{ color: "white", marginTop: "8%", paddingBottom: "1%" }}>User Name</span>
+                <div className="login__box-test-field">
+                    <span className="login__box-test-field__description">User Name</span>
                     <TextField
                         //helperText="Please enter your email"
                         inputProps={{ "data-testid": "form-user" }}
@@ -47,9 +44,8 @@ const Login = () => {
                         sx={{ input: { color: 'white' }, border: '2px solid white', borderRadius: 0.5, width: { sm: 400, md: 400 } }}
                     />
                 </div>
-
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                    <span style={{ color: "white", marginTop: "8%", paddingBottom: "1%" }}>Password</span>
+                <div className="login__box-test-field">
+                    <span className="login__box-test-field__description">Password</span>
                     <TextField id="demo-helper-text-misaligned-no-helper"
                         inputProps={{ "data-testid": "form-password" }}
                         value={password}
@@ -58,7 +54,6 @@ const Login = () => {
                         sx={{ input: { color: 'white' }, border: '2px solid white', borderRadius: 0.5, width: { sm: 400, md: 400 } }}
                     />
                 </div>
-
 
                 <Button
                     variant="contained"

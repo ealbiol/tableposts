@@ -18,7 +18,6 @@ describe("Test 1 - Basic render:", ()=>{
     test("checking on click to buttons", ()=>{
         render(<GridCardPosts listPosts={listPostsMocked}></GridCardPosts>)
         const button = screen.getAllByRole("button");
-        console.log("Botones" , button.length, button);
         fireEvent.click(button[1]);
         fireEvent.click(button[0]);  
     })

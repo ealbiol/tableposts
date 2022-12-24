@@ -12,15 +12,12 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-        
           <Routes>
             <Route element={<SidebarLayout/>}>
                 <Route path="/home" element={<PostPage />} />
             </Route>
-        
             <Route path="/" element={<Login />} />
           </Routes>
-
     </BrowserRouter>
   );
 };

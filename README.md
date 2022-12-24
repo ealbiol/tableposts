@@ -2,7 +2,6 @@
 Table Posts - An app to visualize posts which can be both edited and removed.
 
 <a href="https://leafy-semifreddo-cd3cef.netlify.app/">
- 
   Go to the Table Posts App deployed online.
 </a>
 
@@ -18,7 +17,9 @@ Table Posts - An app to visualize posts which can be both edited and removed.
 - Edit posts.
 - Remove posts.
 - Test coverage near 70%.
-- 100% Responsive
+- 100% Responsive.
+- SCSS Variables and Mixins.
+- BEM Methodology.
 
 
 ### Installation steps.
@@ -41,5 +42,5 @@ yarn test
 yart test:coverage
 ```
 
-  <img alt="Test Coverage" src="./src/Images/test-coverage.png" width="400" />
+<img alt="Test Coverage" src="./src/Images/test-coverage.png" width="400" />
 

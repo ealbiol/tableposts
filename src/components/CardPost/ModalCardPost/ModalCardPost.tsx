@@ -41,8 +41,6 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
     return (
         <>
             {modalStatus &&
-
-
                 <form className="modal" onSubmit={(e) => handleEditPost(e)}>
                     <IconButton onClick={() => handleCloseModal()} size="large" style={{ position: "absolute", top: 0, right: 0 }}>
                         <HighlightOffIcon style={{ color: "white" }} />
@@ -53,11 +51,8 @@ const ModalCardPost = ({ singlePost, modalStatus, setModalStatus }: Props) => {
                     <textarea rows={10} cols={30} onChange={e => setBody(e.target.value)} value={body} />
                     <input type="submit" value="Submit" className="modal__submit"/>
                 </form>
-
-
             }
         </>
-
     )
 }
 

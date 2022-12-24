@@ -23,7 +23,7 @@ const GridCardPosts = ({ listPosts }: Props) => {
         store.dispatch(deletePost(index));
     }
     const [modalStatus, setModalStatus] = useState(false);
-    const [postSelected, setPostSelected] = useState<Post>({ userId: 0, id: 0, title: "", body: "" , url: ""});
+    const [postSelected, setPostSelected] = useState<Post>({ userId: 0, id: 0, title: "", body: "", url: "" });
     const [nPostShown, setNPostShown] = useState<number>(10);
 
     const handleNPostsBack = () => {
@@ -47,7 +47,7 @@ const GridCardPosts = ({ listPosts }: Props) => {
 
                             :
                             <IconButton id="go-forward" onClick={() => handleNPostsBack()} >
-                                <ArrowBackIosIcon style={{ color: "grey" }}/>
+                                <ArrowBackIosIcon style={{ color: "grey" }} />
                             </IconButton>
                     }
                 </span>
@@ -58,7 +58,7 @@ const GridCardPosts = ({ listPosts }: Props) => {
                     {
                         nPostShown < listPosts.length ?
                             <IconButton onClick={() => handleNPostsForward()}>
-                                <ArrowForwardIosIcon style={{ color: "grey" }}/>
+                                <ArrowForwardIosIcon style={{ color: "grey" }} />
                             </IconButton>
                             :
                             <IconButton disabled={true}>
@@ -66,22 +66,16 @@ const GridCardPosts = ({ listPosts }: Props) => {
                             </IconButton>
                     }
                 </span>
-
             </div>
             <div className="grid-posts">
                 <ModalCardPost singlePost={postSelected} modalStatus={modalStatus} setModalStatus={setModalStatus} />
-
                 {listPosts.map((post: Post, key_id: number) => {
                     return (
                         <CardPost post={post} handleDeletePost={handleDeletePost} key={key_id} setPostSelected={setPostSelected} setModal={setModalStatus}></CardPost>
                     )
                 }).slice(nPostShown - 10, nPostShown)}
-
-
             </div>
-
         </div>
-
     )
 }
 

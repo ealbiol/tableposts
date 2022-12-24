@@ -22,12 +22,12 @@ const SideBar = () => {
     });
 
     return (
-        <div style={{ display: "flex" }}>
+        <div className="sidebar-container">
             <div>
                 {
                     sideBarVisibility ?
                         <ThemeProvider theme={theme}>
-                            <div className="sidebar-container">
+                            <div className="sidebar-container__sidebar-buttons">
                                 <Button variant="contained" sx={{ width: 200, padding: 1, margin: 2 }} color="primary">Dashboard</Button>
                                 <Button variant="contained" sx={{ width: 200, padding: 1, margin: 2 }} color="primary">Page 1</Button>
                                 <Button variant="contained" sx={{ width: 200, padding: 1, margin: 2 }} color="primary">Page 1</Button>
@@ -44,7 +44,7 @@ const SideBar = () => {
                         ""
                 }
             </div>
-            <div style={{ marginTop: "4%", }}>
+            <div className="sidebar-container__sidebar-arrow">
                 {
                     sideBarVisibility ?
                         <IconButton onClick={() => handleSideBarVisibility()}>

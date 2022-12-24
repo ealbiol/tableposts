@@ -1,4 +1,3 @@
-
 import { getPosts } from '../api/getPosts';
 import { store, setPost } from "../app/ReduxStore";
 import { useEffect, useState } from "react";
@@ -9,7 +8,6 @@ import { Navigate} from "react-router-dom";
 
 function PostPage() {
     const [listPost, setListPost] = useState<Array<Post>>([])
-    //const [user, setUser] = useState<Object>()
     store.subscribe(() => setListPost(store.getState().listPosts))
     const getPostsF = async () => {
         const res = await getPosts();
@@ -33,7 +31,6 @@ function PostPage() {
             
         );
     } else {
-       
         return (<Navigate to="/"/>)
     }
 }

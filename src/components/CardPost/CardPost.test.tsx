@@ -11,7 +11,6 @@ describe("Test 1 - Basic render:", () => {
         url: "http://example.com/"
     }
     const handleDeletePost = (id_post: number) => {
-        console.log("Hemos clicado en el boton de borrar");
     }
     const setPostSelected = (post: Post) => { };
     const setModal = (isModalOpen: boolean) => { };

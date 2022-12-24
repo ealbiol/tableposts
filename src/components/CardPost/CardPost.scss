@@ -3,25 +3,24 @@
 .card-post{
     @include font-site();
     @include post-style();
-    
-    &__header{
-        font-size: 24px;
-        text-align: center;
-        border-bottom: 2px black ;
-        padding: 10px;
-        text-transform: capitalize;
-        word-wrap:anywhere;
-    }
-    &__body{
-        font-size: 16px;
-        text-align: center;
-        margin-bottom: 25px;
-        font-size: 12px;
+        &__header{
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 2px black ;
+            padding: 10px;
+            text-transform: capitalize;
+            word-wrap:anywhere;
         }
-    &__userid{
-       position: absolute;
-       bottom: 0;     
-    }
+        &__body{
+            font-size: 16px;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 12px;
+            }
+        &__userid{
+        position: absolute;
+        bottom: 0;     
+        }
 }
 
 .card-post:hover {
