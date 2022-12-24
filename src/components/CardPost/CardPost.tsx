@@ -7,10 +7,10 @@ import EditIcon from '@mui/icons-material/Edit';
 
 
 interface Props {
-  post: Post;
-  handleDeletePost: (id_post: number) => void;
-  setPostSelected: (postSelected: Post) => void;
-  setModal: (modal_mode: boolean) => void;
+    post: Post;
+    handleDeletePost: (id_post: number) => void;
+    setPostSelected: (postSelected: Post) => void;
+    setModal: (modal_mode: boolean) => void;
 }
 
 /**
@@ -19,40 +19,42 @@ interface Props {
  * @param param1 {Function} handleDeletePost
  * @returns 
  */
+
 const CardPost = ({ post, handleDeletePost, setPostSelected, setModal }: Props) => {
 
-  const handleSelected = () => {
-    setPostSelected(post);
-    setModal(true);
-  };
+    const handleSelected = () => {
+        setPostSelected(post);
+        setModal(true);
+    };
 
-  return (
-    <div className='card-post'>
-      <IconButton
-        size="large"
-        style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }}
-        onClick={() => handleDeletePost(post.id)}
-        id="button-delete"
-        >
-        <HighlightOffIcon />
-      </IconButton>
-      <IconButton onClick={() => handleSelected()} id="button-selected" style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
-        <EditIcon />
-      </IconButton>
+    return (
+        <div className='card-post'>
+            <IconButton
+                size="large"
+                style={{ position: "absolute", top: -3, right: 0, color: "#E50914" }}
+                onClick={() => handleDeletePost(post.id)}
+                id="button-delete"
+            >
+                <HighlightOffIcon />
+            </IconButton>
+            <IconButton
+                onClick={() => handleSelected()} id="button-selected"
+                style={{ color: "white", position: "absolute", top: 0, right: 40 }}>
+                <EditIcon />
+            </IconButton>
 
-      <h1 className='card-post__header'>
-        {post.title}
-      </h1>
-      <img src={post.url} />
+            <h1 className='card-post__header'>
+                {post.title}
+            </h1>
+            <img src={post.url} />
 
-      <p className='card-post__body'>
-        {post.body}
-      </p>
-      <p className='card-post__userid'>
-        User {post.userId}
-      </p>
-
-    </div>
-  )
+            <p className='card-post__body'>
+                {post.body}
+            </p>
+            <p className='card-post__userid'>
+                User {post.userId}
+            </p>
+        </div>
+    )
 }
 export default CardPost;

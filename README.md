@@ -15,6 +15,10 @@ Table Posts - An app to visualize posts which can be both edited and removed.
 - Remove posts.
 - Test coverage near 70%.
 
+### Important
+
+- You can login with any email and password.
+
 ### Installation steps.
 This project can be locally installed with the following steps.
 ```bash
