@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
-
+import { fireEvent, render, screen } from '@testing-library/react';
+import { listPostsMocked } from '../../mocks/mockPosts';
+listPostsMocked
 import GridCardPosts from './GridCardPosts';
 describe("Test 1 - Basic render:", ()=>{
     test("Check if CardPost component renders without problems",()=>{
@@ -13,6 +14,13 @@ describe("Test 1 - Basic render:", ()=>{
       
         render(<GridCardPosts listPosts={[]}></GridCardPosts>)
         
+    });
+    test("checking on click to buttons", ()=>{
+        render(<GridCardPosts listPosts={listPostsMocked}></GridCardPosts>)
+        const button = screen.getAllByRole("button");
+        console.log("Botones" , button.length, button);
+        fireEvent.click(button[1]);
+        fireEvent.click(button[0]);  
     })
 })
 

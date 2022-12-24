@@ -37,7 +37,7 @@ const GridCardPosts = ({ listPosts }: Props) => {
 
     return (
         <div>
-            <div className="pagination-posts">
+            <div className="pagination-posts" data-testid="pagination-posts">
                 <span>
                     {
                         nPostShown <= 10 ?
@@ -46,7 +46,7 @@ const GridCardPosts = ({ listPosts }: Props) => {
                             </IconButton>
 
                             :
-                            <IconButton onClick={() => handleNPostsBack()} >
+                            <IconButton id="go-forward" onClick={() => handleNPostsBack()} >
                                 <ArrowBackIosIcon />
                             </IconButton>
                     }

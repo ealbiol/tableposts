@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { BrowserRouter } from "react-router-dom";
 import PostPage from './pages/PostPage';
-import TestPage from './pages/TestPage';
 import "./App.scss"
 import "./scss/appStyling.scss"
 import NavBar from './components/NavBar/NavBar';
