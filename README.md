@@ -48,3 +48,5 @@ npm test
 npm test:coverage
 ```
 
+  <img alt="Test Coverage" src="./src/Images/test-coverage.png" width="180" />
+
