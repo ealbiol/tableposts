@@ -48,5 +48,5 @@ npm test
 npm test:coverage
 ```
 
-  <img alt="Notify Me Button Image" src="./src/Images/test-coverage.png" width="180" />
+  <img alt="Test Coverage" src="./src/Images/test-coverage.png" width="180" />
 
