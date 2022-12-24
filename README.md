@@ -20,10 +20,6 @@ This project can be locally installed with the following steps.
 ```bash
 yarn
 ```
-or
-```bash
-npm install
-```
 
 ### Run steps
 This project can be locally runned with the following steps.
@@ -31,21 +27,12 @@ This project can be locally runned with the following steps.
 ```bash
 yarn start
 ```
-or
-```bash
-npm start
-```
 
 ### Test steps
 The test can be launched with:
 ```bash
 yarn test
 yart test:coverage
-```
-or
-```bash
-npm test
-npm test:coverage
 ```
 
   <img alt="Test Coverage" src="./src/Images/test-coverage.png" width="400" />
