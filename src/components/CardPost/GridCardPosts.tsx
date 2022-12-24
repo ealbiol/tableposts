@@ -42,12 +42,12 @@ const GridCardPosts = ({ listPosts }: Props) => {
                     {
                         nPostShown <= 10 ?
                             <IconButton disabled={true} >
-                                <ArrowBackIosIcon style={{ color: "grey" }} />
+                                <ArrowBackIosIcon style={{ color: "black" }} />
                             </IconButton>
 
                             :
                             <IconButton id="go-forward" onClick={() => handleNPostsBack()} >
-                                <ArrowBackIosIcon />
+                                <ArrowBackIosIcon style={{ color: "grey" }}/>
                             </IconButton>
                     }
                 </span>
@@ -58,11 +58,11 @@ const GridCardPosts = ({ listPosts }: Props) => {
                     {
                         nPostShown < listPosts.length ?
                             <IconButton onClick={() => handleNPostsForward()}>
-                                <ArrowForwardIosIcon />
+                                <ArrowForwardIosIcon style={{ color: "grey" }}/>
                             </IconButton>
                             :
                             <IconButton disabled={true}>
-                                <ArrowForwardIosIcon style={{ color: "grey" }} />
+                                <ArrowForwardIosIcon style={{ color: "black" }} />
                             </IconButton>
                     }
                 </span>

@@ -6,6 +6,10 @@ Table Posts - An app to visualize posts which can be both edited and removed.
   Go to the Table Posts App deployed online.
 </a>
 
+### Important
+
+- You can login with any email and password.
+
 ### Key features
 
 - Login.
@@ -14,10 +18,8 @@ Table Posts - An app to visualize posts which can be both edited and removed.
 - Edit posts.
 - Remove posts.
 - Test coverage near 70%.
+- 100% Responsive
 
-### Important
-
-- You can login with any email and password.
 
 ### Installation steps.
 This project can be locally installed with the following steps.

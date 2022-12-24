@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Post } from "../interfaces/Post";
 import { GridCardPosts } from '../components/CardPost';
 import { Navigate} from "react-router-dom";
-import { Obj } from 'reselect/es/types';
 
 
 function PostPage() {

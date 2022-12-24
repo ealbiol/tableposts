@@ -33,4 +33,4 @@ export const { setPost, deletePost, updatePost } = postSlice.actions;
 
 export const store = configureStore({
   reducer: postSlice.reducer,
-});
+ });
